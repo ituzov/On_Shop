@@ -1,17 +1,11 @@
 const router = require('express').Router();
+const deviceController = require('../controllers/deviceController');
 
+router.post('/', deviceController.create );
 
-router.post('/', (req, res) => {
-    // обработчик для POST-запроса на /device
-});
+router.get('/', deviceController.getAll);
 
-router.get('/', (req, res) => {
-    // обработчик для GET-запроса на /device
-});
-
-router.get('/:id', (req, res) => {
-    // обработчик для GET-запроса на /device/:id
-});
+router.get('/:id', deviceController.getOne);
 
 
 

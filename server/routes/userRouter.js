@@ -1,14 +1,10 @@
 const router = require('express').Router();
+const userController = require('../controllers/userController');
 
-router.post('/registration',(req, res) => {
-    // обработчик для POST-запроса на /device
-});
-router.post('/login',(req, res) => {
-    // обработчик для POST-запроса на /device
-});
-router.get('/auth', (req, res) => {
-    res.json({message: 'AllWorking!'});
-});
+
+router.post('/registration',userController.registration);
+router.post('/login',userController.login);
+router.get('/auth', userController.check);
 
 
 module.exports = router;

@@ -1,12 +1,9 @@
 const router = require('express').Router();
+const brandController = require('../controllers/brandController')
 
 
-router.post('/',(req, res) => {
-    // обработчик для POST-запроса на /device
-});
-router.get('/',(req, res) => {
-    // обработчик для POST-запроса на /device
-});
+router.post('/', brandController.create);
+router.get('/',brandController.getAll);
 
 
 module.exports = router;

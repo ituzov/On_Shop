@@ -1,12 +1,9 @@
 const router = require('express').Router();
+const typeController = require('../controllers/typeController');
 
 
-router.post('/',(req, res) => {
-    // обработчик для POST-запроса на /device
-});
-router.get('/',(req, res) => {
-    // обработчик для POST-запроса на /device
-});
+router.post('/', typeController.create );
+router.get('/', typeController.getAll);
 
 
 module.exports = router;
